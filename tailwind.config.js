@@ -10,6 +10,7 @@ export default {
       colors: {
         'blueLight': '#EDF0FF',
         'blue': '#0025CE',
+        'green': '#00BF63',
       }
     },
   },
