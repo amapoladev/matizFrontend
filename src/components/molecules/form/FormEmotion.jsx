@@ -64,10 +64,10 @@ const Form = () => {
 
             const data = await response.json();
             console.log(data);
-            toast.success('¡El formulario se envió exitosamente!', { autoClose: 3000 });
+            toast.success('¡La emoción se guardó exitosamente!', { autoClose: 3000 });
         } catch (error) {
             console.error('Error al enviar el formulario:', error);
-            toast.error('¡Hubo un problema al enviar el formulario!', { autoClose: 3000 });
+            toast.error('¡Hubo un problema al guardar tu emoción!', { autoClose: 3000 });
         }
     };
 
