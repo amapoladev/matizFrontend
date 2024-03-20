@@ -9,7 +9,7 @@ const Zones = () => {
     return (
         <>
             <div className='mt-8 mx-8 flex flex-wrap justify-around'>
-                <div className='p-4 sm:p-2 lg:p-4'>
+                <div className='p-4 sm:p-4 lg:p-4'>
                     <Card
                         icon={Emocionario}
                         iconName="EmocionarioIconoADiario"
@@ -19,7 +19,7 @@ const Zones = () => {
                         linkTo="/emotionary"/>
                 </div>
 
-                <div className='p-4 sm:p-2 lg:p-4'>
+                <div className='p-4 sm:p-4 lg:p-4'>
                     <Card
                         icon={Canciones}
                         iconName="CancionesIconoACantando"
@@ -28,7 +28,7 @@ const Zones = () => {
                         cardColor="bg-blueLight" />
                 </div>
 
-                <div className='p-4 sm:p-2 lg:p-4'>
+                <div className='p-4 sm:p-4 lg:p-4'>
                     <Card
                         icon={Cuentos}
                         iconName="CuentosIconoLeyendo"
@@ -37,7 +37,7 @@ const Zones = () => {
                         cardColor="bg-blueLight" />
                 </div>
 
-                <div className='p-4 sm:p-2 lg:p-4'>
+                <div className='p-4 sm:p-4 lg:p-4'>
                     <Card
                         icon={Alegria}
                         iconName="JuegosIconoAlegria"
