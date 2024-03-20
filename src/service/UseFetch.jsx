@@ -22,7 +22,7 @@ const UseFetch = (url) => {
         getData(url);
 
         return () => {
-            
+
         };
     }, [url]);
 

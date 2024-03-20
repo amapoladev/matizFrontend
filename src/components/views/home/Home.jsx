@@ -13,12 +13,6 @@ const Home = () => {
       </div>
       <Emotions />
       <Zones />
-
-
-
-
-
-
       <Footer />
     </>
   );

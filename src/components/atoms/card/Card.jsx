@@ -1,7 +1,8 @@
 import React from 'react';
 import { useSpring, animated } from 'react-spring'
+import { Link } from 'react-router-dom';
 
-const Card = ({ icon, iconName, category, textColor, cardColor }) => {
+const Card = ({ icon, iconName, category, textColor, cardColor, linkTo }) => {
     const [props, set] = useSpring(() => ({ scale: 1, opacity: 1 }))
 
     return (
@@ -11,10 +12,12 @@ const Card = ({ icon, iconName, category, textColor, cardColor }) => {
             onMouseEnter={() => set({ scale: 1.1, opacity: 0.9 })}
             onMouseLeave={() => set({ scale: 1, opacity: 1 })}
         >
-            <figure><img className="h-32 mt-8" src={icon} alt={iconName} /></figure>
-            <div className="card-body flex items-center">
-                <a href=""><h2 className={`card-title ${textColor}`}>{category}</h2></a>
-            </div>
+             <Link to={linkTo}>
+                <figure><img className="h-32 mt-8" src={icon} alt={iconName} /></figure>
+                <div className="card-body flex items-center">
+                    <h2 className={`card-title ${textColor}`}>{category}</h2>
+                </div>
+            </Link>
         </animated.div>
     );
 }

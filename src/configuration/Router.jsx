@@ -7,12 +7,12 @@ import Emotionary from '../components/views/emotionary/Emotionary';
 const Router = () => {
   return (
     <BrowserRouter>
-    <Routes>
-    <Route path='/' element={<Home/>}></Route>
-    <Route path='/form' element={<Form/>}></Route>
-    <Route path='/emotionary' element={<Emotionary/>}></Route>
-    </Routes>
-   </BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home />}></Route>
+        <Route path='/form' element={<Form />}></Route>
+        <Route path='/emotionary' element={<Emotionary />}></Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 

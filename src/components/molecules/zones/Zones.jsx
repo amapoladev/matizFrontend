@@ -15,7 +15,8 @@ const Zones = () => {
                         iconName="EmocionarioIconoADiario"
                         category="Emocionario"
                         textColor="text-green"
-                        cardColor="bg-blueLight" />
+                        cardColor="bg-blueLight" 
+                        linkTo="/emotionary"/>
                 </div>
 
                 <div className='p-4 sm:p-2 lg:p-4'>
