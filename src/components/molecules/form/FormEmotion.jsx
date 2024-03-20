@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { toast, ToastContainer } from 'react-toastify'; // Importa toast y ToastContainer
+import 'react-toastify/dist/ReactToastify.css'; // Importa el CSS necesario
 
-const FormEmotion = () => {
+const Form = () => {
     const [selectedFile, setSelectedFile] = useState();
     const [preview, setPreview] = useState();
-    const [isModalOpen, setIsModalOpen] = useState(false);
 
     useEffect(() => {
         if (!selectedFile) {
@@ -63,16 +64,15 @@ const FormEmotion = () => {
 
             const data = await response.json();
             console.log(data);
-
-            // Abre el modal cuando la emoción se guarda con éxito
-            setIsModalOpen(true);
+            toast.success('¡El formulario se envió exitosamente!', { autoClose: 3000 });
         } catch (error) {
             console.error('Error al enviar el formulario:', error);
+            toast.error('¡Hubo un problema al enviar el formulario!', { autoClose: 3000 });
         }
     };
 
     return (
-        <div className="rounded-xl max-w-md mx-auto bg-blueLight clear text-blue">
+        <div className="max-w-md mx-auto bg-blueLight clear text-blue">
             <form
                 className="bg-blue-200 rounded-lg px-8 py-8 space-y-6"
                 action="http://127.0.0.1:8000/api/emotions"
@@ -116,20 +116,18 @@ const FormEmotion = () => {
                     )}
                 </div>
                 <div>
-                    <button type="submit" className="btn">Guardar</button>
+                    <button
+                        type="submit"
+                        className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                    >
+                        Guardar
+                    </button>
                 </div>
             </form>
-            {isModalOpen && (
-                <div className="fixed inset-0 flex items-center justify-center z-50">
-                    <div className="absolute inset-0 bg-gray-500 opacity-50"></div>
-                    <div className="bg-white rounded-lg p-8">
-                        <h2 className="text-lg font-bold mb-4">¡Emoción guardada con éxito!</h2>
-                        <button className="btn" onClick={() => setIsModalOpen(false)}>Cerrar</button>
-                    </div>
-                </div>
-            )}
+            <ToastContainer />
         </div>
     );
 };
 
-export default FormEmotion;
+export default Form;
+
