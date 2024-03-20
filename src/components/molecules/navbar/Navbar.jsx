@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <>
 
-      <div className="navbar bg-blueLight h-24">
+      <div className="navbar bg-blueLight h-24 fixed top-0 z-10">
         <div className="flex-1">
           <a href="/">
             <img className="w-16 md:w-20 lg:w-24" src={Logo} alt="Matiz" />

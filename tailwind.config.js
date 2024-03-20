@@ -11,6 +11,9 @@ export default {
         'blueLight': '#EDF0FF',
         'blue': '#0025CE',
         'green': '#00BF63',
+      },
+      spacing:{
+        'custom': '-12'
       }
     },
   },

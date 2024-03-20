@@ -1,22 +1,23 @@
 import React from 'react';
+import { useSpring, animated } from 'react-spring'
 
-const ButtonEmotion = (imageEmotion, emotion) => {
+const ButtonEmotion = ({ buttonEmotionName, emotionIcon, EmotionButtom, textColorButtom,buttonColor }) => {
+    const [props, set] = useSpring(() => ({ scale: 1, opacity: 1 }))
+
     return (
-        <>
-            <a href="">
-                <div className="card w-24 h-24 glass bg-blueLight text-green">
-                    <figure><img
-                        className="cardFlagImg"
-                        src={imageEmotion}
-                        alt={`Emoción ${emotion}`}
-                    /></figure>
-            <div className="card-body flex items-center">
-                <a href=""><h2 className="card-title">Juegos</h2></a>
+        <animated.div
+            className={`card m-2 rounded-full w-24 h-24 glass ${buttonColor} sm:flex`}
+            style={props}
+            onMouseEnter={() => set({ scale: 1.1, opacity: 0.9 })}
+            onMouseLeave={() => set({ scale: 1, opacity: 1 })}
+        >
+            <figure><img className="h-16 pt-2" src={emotionIcon} alt={buttonEmotionName} /></figure>
+            <div className="card-body py-0 flex justify-center">
+                <a href=""><h4 className={`card-title text-xs pb-2  ${textColorButtom}`}>{EmotionButtom}</h4></a>
             </div>
-        </div >
-            </a >
-        </>
-  );
+        </animated.div>
+    );
 }
+
 
 export default ButtonEmotion;

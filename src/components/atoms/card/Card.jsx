@@ -6,7 +6,7 @@ const Card = ({ icon, iconName, category, textColor, cardColor }) => {
 
     return (
         <animated.div
-            className={`card w-52 glass ${cardColor}`}
+            className={`card w-52 glass ${cardColor} sm:flex`}
             style={props}
             onMouseEnter={() => set({ scale: 1.1, opacity: 0.9 })}
             onMouseLeave={() => set({ scale: 1, opacity: 1 })}
