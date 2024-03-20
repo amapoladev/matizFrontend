@@ -11,12 +11,9 @@ const Home = () => {
       <div>
         <h1 className='mt-32 mb-4 text-red-500 font-bold aligne-center ml-8 mt-4'>Hola!<br></br> ¿Cómo te sientes hoy?</h1>
       </div>
-      <div>
-        <Emotions />
-      </div>
-      <div>
-        <Zones />
-      </div>
+      <Emotions />
+      <Zones />
+
 
 
 
