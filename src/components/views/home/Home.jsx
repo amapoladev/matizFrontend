@@ -9,7 +9,7 @@ const Home = () => {
     <>
       <Navbar />
       <div>
-        <h1 className='sm:mt-32 mt-32 mb-4 text-red-500 font-bold aligne-center ml-8 mt-4'>Hola!<br></br> ¿Cómo te sientes hoy?</h1>
+        <h1 className='sm:mt-32 mt-32 mb-4 text-red-500 font-bold aligne-center ml-8'>Hola!<br></br> ¿Cómo te sientes hoy?</h1>
       </div>
       <Emotions />
       <Zones />

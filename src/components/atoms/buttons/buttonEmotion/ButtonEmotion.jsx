@@ -14,7 +14,7 @@ const ButtonEmotion = ({ buttonEmotionName, emotionIcon, textColorButtom, button
         try {
             // Realiza la solicitud a tu API para guardar la información
             // Por ejemplo:
-            const response = await fetch('http://tu-api.com/users_emotions', {
+            const response = await fetch('http://127.0.0.1:8000/api/users_emotions', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ emotion: buttonEmotionName, pressed: !pressed }), // Pasa el estado de presionado

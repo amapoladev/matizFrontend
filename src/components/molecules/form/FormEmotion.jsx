@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { toast, ToastContainer } from 'react-toastify'; // Importa toast y ToastContainer
-import 'react-toastify/dist/ReactToastify.css'; // Importa el CSS necesario
+import { toast, ToastContainer } from 'react-toastify'; 
+import 'react-toastify/dist/ReactToastify.css'; 
 
 const Form = () => {
     const [selectedFile, setSelectedFile] = useState();
